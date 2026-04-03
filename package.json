@@ -1,0 +1,26 @@
+{
+  "name": "abstractly.dev",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,scss,js,md}\"",
+    "build": "sass scss/main.scss css/main.css --no-source-map && node scripts/build-projects.js",
+    "watch": "sass --watch scss/main.scss css/main.css --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abstractlydev/abstractly.dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/abstractlydev/abstractly.dev/issues"
+  },
+  "homepage": "https://github.com/abstractlydev/abstractly.dev#readme",
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "sass": "^1.99.0"
+  }
+}

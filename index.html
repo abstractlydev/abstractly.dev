@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>abstractly.dev | Engineering Consultancy by Jake Rysiński Brown</title>
+        <meta
+            name="description"
+            content="abstractly.dev is an independent engineering and business consultancy, focused on designing and building scalable, cloud-native systems."
+        />
+
+        <!-- Open Graph / Facebook SEO -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://abstractly.dev/" />
+        <meta
+            property="og:title"
+            content="abstractly.dev | Engineering Consultancy by Jake Rysiński Brown"
+        />
+        <meta
+            property="og:description"
+            content="An independent digital consultancy bridging the gap between complex engineering and core business objectives, delivering systems that scale."
+        />
+        <meta property="og:image" content="https://abstractly.dev/assets/og-image.png" />
+
+        <!-- Twitter SEO -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://abstractly.dev/" />
+        <meta property="twitter:title" content="abstractly.dev | Engineering Consultancy" />
+        <meta
+            property="twitter:description"
+            content="An independent digital consultancy bridging the gap between complex engineering and core business objectives, delivering systems that scale."
+        />
+        <meta property="twitter:image" content="https://abstractly.dev/assets/og-image.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css?v=1.1" />
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+        <link rel="manifest" href="assets/site.webmanifest" />
+        <link rel="shortcut icon" href="assets/favicon.ico" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__logo">
+                    <a href="/"><img src="assets/logo.png" alt="abstractly.dev logo" /></a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Service</a></li>
+                        <li><a href="#work">Experience</a></li>
+                        <li class="nav-social-group">
+                            <div class="divider"></div>
+                            <a
+                                href="https://www.linkedin.com/in/onlyimmutable/"
+                                target="_blank"
+                                aria-label="LinkedIn"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                    />
+                                    <rect width="4" height="12" x="2" y="9" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://instagram.com/jakeythedev"
+                                target="_blank"
+                                aria-label="Instagram"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                                </svg>
+                            </a>
+                            <a href="#contact" aria-label="Email">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="geo-container">
+                    <div class="geo geo-1"></div>
+                    <div class="geo geo-2"></div>
+                    <div class="geo geo-3"></div>
+                </div>
+                <div class="container hero__content">
+                    <div class="availability-badge fade-in" style="transition-delay: 0.1s">
+                        <span class="pulse-dot"></span>
+                        Accepting new projects & work
+                    </div>
+                    <h1 class="hero__title fade-in" style="transition-delay: 0.2s">
+                        BUILD STRATEGIES.
+                        <br />
+                        SCALE SYSTEMS.
+                        <br />
+                        <span class="highlight">DRIVE GROWTH.</span>
+                    </h1>
+                    <p class="hero__description fade-in" style="transition-delay: 0.3s">
+                        <strong>abstractly.dev</strong>
+                        is an independent digital consultancy. I bridge the gap between complex
+                        engineering and core business objectives, delivering systems that scale.
+                    </p>
+                    <div class="button-group fade-in" style="transition-delay: 0.4s">
+                        <a href="#contact" class="btn btn--primary">
+                            Reach out
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="marquee-section">
+                <div class="marquee">
+                    <div class="marquee__inner">
+                        <!-- SET 1 -->
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                                alt="Java"
+                            />
+                            <span>JAVA</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                alt="Python"
+                            />
+                            <span>PYTHON</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg"
+                                alt="Go"
+                            />
+                            <span>GO</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                                alt="TypeScript"
+                            />
+                            <span>TYPESCRIPT</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                                alt="React"
+                            />
+                            <span>REACT</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                alt="AWS"
+                                style="filter: brightness(0) invert(1)"
+                            />
+                            <span>AWS</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+                                alt="GCP"
+                            />
+                            <span>GCP</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg"
+                                alt="Kubernetes"
+                            />
+                            <span>KUBERNETES</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                                alt="Docker"
+                            />
+                            <span>DOCKER</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg"
+                                alt="Kafka"
+                            />
+                            <span>APACHE KAFKA</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+                                alt="Redis"
+                            />
+                            <span>REDIS</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg"
+                                alt="Terraform"
+                            />
+                            <span>TERRAFORM</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+                                alt="Spring Boot"
+                            />
+                            <span>SPRING BOOT</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg"
+                                alt="RabbitMQ"
+                            />
+                            <span>RABBITMQ</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 180 180"
+                                fill="white"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M90 180c49.7 0 90-40.3 90-90s-40.3-90-90-90S0 39.3 0 90s40.3 90 90 90zm37.4-58.4L73.1 55H56v69h13.3V73l45.4 57.6A76.3 76.3 0 0 0 127.4 121.6zM110.1 55h-13.3v69h13.3V55z"
+                                />
+                            </svg>
+                            <span>NEXT.JS</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg"
+                                alt="GraphQL"
+                            />
+                            <span>GRAPHQL</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB"
+                            />
+                            <span>MONGODB</span>
+                        </div>
+                        <div class="divider"></div>
+
+                        <!-- SET 2 (DUPLICATE FOR CONTINUOUS LOOP) -->
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                                alt="Java"
+                            />
+                            <span>JAVA</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                alt="Python"
+                            />
+                            <span>PYTHON</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg"
+                                alt="Go"
+                            />
+                            <span>GO</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                                alt="TypeScript"
+                            />
+                            <span>TYPESCRIPT</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                                alt="React"
+                            />
+                            <span>REACT</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                alt="AWS"
+                                style="filter: brightness(0) invert(1)"
+                            />
+                            <span>AWS</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+                                alt="GCP"
+                            />
+                            <span>GOOGLE CLOUD PLATFORM</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg"
+                                alt="Kubernetes"
+                            />
+                            <span>KUBERNETES</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                                alt="Docker"
+                            />
+                            <span>DOCKER</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg"
+                                alt="Kafka"
+                            />
+                            <span>APACHE KAFKA</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+                                alt="Redis"
+                            />
+                            <span>REDIS</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg"
+                                alt="Terraform"
+                            />
+                            <span>TERRAFORM</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+                                alt="Spring Boot"
+                            />
+                            <span>SPRING BOOT</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg"
+                                alt="RabbitMQ"
+                            />
+                            <span>RABBITMQ</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 180 180"
+                                fill="white"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M90 180c49.7 0 90-40.3 90-90s-40.3-90-90-90S0 39.3 0 90s40.3 90 90 90zm37.4-58.4L73.1 55H56v69h13.3V73l45.4 57.6A76.3 76.3 0 0 0 127.4 121.6zM110.1 55h-13.3v69h13.3V55z"
+                                />
+                            </svg>
+                            <span>NEXT.JS</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg"
+                                alt="GraphQL"
+                            />
+                            <span>GRAPHQL</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB"
+                            />
+                            <span>MONGODB</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="marquee__item">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                style="color: #64ffda"
+                            >
+                                <path
+                                    d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"
+                                />
+                            </svg>
+                            <span>SYSTEM ARCHITECTURE</span>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="section section--darker">
+                <div class="geo-container">
+                    <div class="geo geo-1"></div>
+                    <div class="geo geo-2"></div>
+                </div>
+                <div class="container">
+                    <div class="section__header section__header--left fade-in">
+                        <span class="section__label">(WHAT I DO)</span>
+                        <h2 class="section__title">
+                            Consultancy
+                            <span class="highlight">Services</span>
+                        </h2>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card fade-in" style="transition-delay: 0.1s">
+                            <span class="service-card__num">01</span>
+                            <h3>Architecture & Modernisation</h3>
+                            <p>
+                                Designing cloud-native, distributed systems with a focus on high
+                                availability, performance, and fault tolerance.
+                            </p>
+                        </div>
+                        <div class="service-card fade-in" style="transition-delay: 0.2s">
+                            <span class="service-card__num">02</span>
+                            <h3>Backend Engineering</h3>
+                            <p>
+                                Building robust services and data pipelines using Java and Python.
+                                Ensuring reliability and efficient scale.
+                            </p>
+                        </div>
+                        <div class="service-card fade-in" style="transition-delay: 0.3s">
+                            <span class="service-card__num">03</span>
+                            <h3>Premium Frontend Experiences</h3>
+                            <p>
+                                Creating seamless, responsive user interfaces with TypeScript and
+                                React that feel modern and intuitive.
+                            </p>
+                        </div>
+                        <div class="service-card fade-in" style="transition-delay: 0.4s">
+                            <span class="service-card__num">04</span>
+                            <h3>Business & Technical Strategy</h3>
+                            <p>
+                                Drawing from direct founder and operational experience, I partner
+                                with leadership to align technology architecture directly with
+                                commercial and growth parameters.
+                            </p>
+                        </div>
+
+                        <div
+                            class="service-card service-card--full"
+                            style="
+                                text-align: center;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 4rem 2rem;
+                            "
+                        >
+                            <span class="service-card__num" style="margin-bottom: 1rem">//</span>
+                            <h3>Bespoke Requirements</h3>
+                            <p style="max-width: 600px; margin: 0 auto">
+                                Every digital operation is unique. If you have complex engineering
+                                challenges or architectural needs not explicitly listed here, I'm
+                                always happy to jump on a call and discuss how I can help.
+                            </p>
+                            <a
+                                href="#contact"
+                                class="btn btn--primary"
+                                style="margin-top: 2rem"
+                            >
+                                Get in touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section">
+                <div class="geo-container">
+                    <div class="geo geo-1"></div>
+                    <div class="geo geo-2"></div>
+                    <div class="geo geo-3"></div>
+                </div>
+                <div class="container about-split">
+                    <div class="about-split__text fade-in">
+                        <span class="section__label">(WHO I AM)</span>
+                        <h2 class="section__title">
+                            Engineering for
+                            <span class="highlight">business outcomes.</span>
+                        </h2>
+                        <p>
+                            Through abstractly.dev, I provide bespoke consultancy that sits at the
+                            intersection of deep technical execution and commercial strategy. As the
+                            founder of RaceStake and a Senior Software Engineer at Netflix, I bring firsthand
+                            operational experience to every engagement.
+                        </p>
+                        <p>
+                            Whether you need a fractional technical partner to guide your startup's
+                            platform architecture, or require hands-on modernisation of enterprise
+                            data pipelines, my focus is always on ensuring that system decisions
+                            drive tangible business value and scalability.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="work" class="section">
+                <div class="geo-container">
+                    <div class="geo geo-2"></div>
+                    <div class="geo geo-3"></div>
+                </div>
+                <div class="container">
+                    <div class="section__header section__header--left fade-in">
+                        <span class="section__label">(EXPERIENCE & ENGAGEMENTS)</span>
+                        <h2 class="section__title">
+                            Industry
+                            <span class="highlight">Pedigree</span>
+                        </h2>
+                    </div>
+
+                    <div class="experience-split">
+                        <div class="experience-timeline">
+                            <h3 class="experience-title">Corporate Experience</h3>
+                            <div class="timeline">
+                                <div class="timeline__item fade-in" style="transition-delay: 0.1s">
+                                    <span class="timeline__date">Starting May 2026</span>
+                                    <h4>Netflix</h4>
+                                    <p>Senior Software Engineer</p>
+                                </div>
+                                <div class="timeline__item fade-in" style="transition-delay: 0.15s">
+                                    <span class="timeline__date">2025 &mdash; Present</span>
+                                    <h4>RaceStake</h4>
+                                    <p>Founder & CEO</p>
+                                </div>
+                                <div class="timeline__item fade-in" style="transition-delay: 0.2s">
+                                    <span class="timeline__date">2024 &mdash; Present</span>
+                                    <h4>Worldpay</h4>
+                                    <p>Staff Software Engineer</p>
+                                </div>
+                                <div class="timeline__item fade-in" style="transition-delay: 0.25s">
+                                    <span class="timeline__date">2023 &mdash; 2024</span>
+                                    <h4>neuroute</h4>
+                                    <p>Senior Fullstack Software Engineer</p>
+                                </div>
+                                <div class="timeline__item fade-in" style="transition-delay: 0.3s">
+                                    <span class="timeline__date">2023</span>
+                                    <h4>Diffblue</h4>
+                                    <p>Senior Fullstack Software Engineer</p>
+                                </div>
+                                <div class="timeline__item fade-in" style="transition-delay: 0.35s">
+                                    <span class="timeline__date">2022</span>
+                                    <h4>Bear Labs</h4>
+                                    <p>Team Lead / Startup Advisor</p>
+                                </div>
+                                <div class="timeline__item fade-in" style="transition-delay: 0.4s">
+                                    <span class="timeline__date">2022</span>
+                                    <h4>SEDNA</h4>
+                                    <p>Fullstack Software Engineer</p>
+                                </div>
+                                <div class="timeline__item fade-in" style="transition-delay: 0.45s">
+                                    <span class="timeline__date">2018 &mdash; 2020</span>
+                                    <h4>Thrive Marketing Limited</h4>
+                                    <p>Fullstack Software Engineer</p>
+                                </div>
+                                <div class="timeline__item fade-in" style="transition-delay: 0.5s">
+                                    <span class="timeline__date">2013 &mdash; Present</span>
+                                    <h4>abstractly.dev</h4>
+                                    <p>Self Employed Consultancy</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-projects">
+                            <h3 class="experience-title">Clients & Projects</h3>
+                            <div class="work-grid" id="projects-grid">
+                                <!-- PROJECTS-START -->
+
+                            <div class="work-card clickable fade-in" data-md="racestake">
+                                <div class="work-card__image-container">
+                                    <div class="browser-mockup">
+               <div class="browser-mockup__header">
+                   <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+               </div>
+               <div class="browser-mockup__content">
+                   <img src="assets/images/racestake.png" alt="RaceStake">
+               </div>
+           </div>
+                                </div>
+                                <div class="work-card__meta">
+                                    <h3>RaceStake</h3>
+                                    <p>Motorsport Collectibles Platform</p>
+                                    <a href="https://racestake.co.uk/" target="_blank" class="card-external-link" aria-label="Visit website">Visit Live Site ↗</a>
+                                </div>
+                            </div>
+
+                            <div class="work-card clickable fade-in" data-md="rio-steakhouse">
+                                <div class="work-card__image-container">
+                                    <div class="browser-mockup">
+               <div class="browser-mockup__header">
+                   <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+               </div>
+               <div class="browser-mockup__content">
+                   <img src="assets/images/rio-steakhouse.png" alt="Rio Brazilian Steakhouse">
+               </div>
+           </div>
+                                </div>
+                                <div class="work-card__meta">
+                                    <h3>Rio Brazilian Steakhouse</h3>
+                                    <p>Enterprise Headless Modernisation</p>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="work-card clickable fade-in" data-md="nwft">
+                                <div class="work-card__image-container">
+                                    <div class="browser-mockup">
+               <div class="browser-mockup__header">
+                   <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+               </div>
+               <div class="browser-mockup__content">
+                   <img src="assets/images/nwft.png" alt="NWFT">
+               </div>
+           </div>
+                                </div>
+                                <div class="work-card__meta">
+                                    <h3>NWFT</h3>
+                                    <p>Bespoke truck management CRM</p>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="work-card clickable fade-in" data-md="iwap">
+                                <div class="work-card__image-container">
+                                    <div class="browser-mockup">
+               <div class="browser-mockup__header">
+                   <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+               </div>
+               <div class="browser-mockup__content">
+                   <img src="assets/images/iwap.png" alt="IWAP">
+               </div>
+           </div>
+                                </div>
+                                <div class="work-card__meta">
+                                    <h3>IWAP</h3>
+                                    <p>Bespoke Knowledge Management CRM</p>
+                                    
+                                </div>
+                            </div>
+                            <!-- PROJECTS-END -->
+                            
+                            <div class="work-more fade-in">
+                                <h3>And more.</h3>
+                                <p>Numerous proprietary consultancy engagements and private enterprise infrastructure projects scaling multi-million dollar platforms.</p>
+                                <a href="#contact" class="btn btn--outline" style="margin-top: 1rem;">Let's discuss your project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="section section--darker">
+                <div class="geo-container">
+                    <div class="geo geo-1"></div>
+                    <div class="geo geo-3"></div>
+                </div>
+                <div class="container">
+                    <div class="section__header section__header--left fade-in">
+                        <span class="section__label">(FREQUENTLY ASKED QUESTIONS)</span>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item fade-in" style="transition-delay: 0.1s">
+                            <button class="faq-item__toggle">
+                                How do you engage with new clients?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-item__content">
+                                <p>
+                                    I typically begin with an initial architectural audit to unearth
+                                    technical bottlenecks and validate system requirements. From
+                                    there, I propose a tailored engineering roadmap, whether that's
+                                    a strategic fractional partnership or a hands-on infrastructure
+                                    migration.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-in" style="transition-delay: 0.2s">
+                            <button class="faq-item__toggle">
+                                Can you operate as a fractional CTO or Staff Software Engineer?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-item__content">
+                                <p>
+                                    Yes. Beyond writing code, I frequently embed within existing
+                                    engineering teams to provide technical leadership, establish
+                                    robust CI/CD and deployment pipelines, and architect highly
+                                    scalable platforms during critical growth phases.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-in" style="transition-delay: 0.3s">
+                            <button class="faq-item__toggle">
+                                What is your core tech stack and expertise?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-item__content">
+                                <p>
+                                    I specialise in scaling data-intensive applications using Java,
+                                    Python, TypeScript, and React. On the infrastructure side, I
+                                    rely on AWS and highly decoupled, event-driven architectures
+                                    (like Kafka) to ensure enterprise-grade resilience and fault
+                                    tolerance.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-in" style="transition-delay: 0.4s">
+                            <button class="faq-item__toggle">
+                                Do you build from scratch or modernise legacy systems?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-item__content">
+                                <p>
+                                    Both. I excel at zero-to-one product engineering for high-growth
+                                    startups, as well as executing complex, zero-downtime refactors
+                                    of legacy enterprise platforms that have become crippled by
+                                    compounding technical debt.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-in" style="transition-delay: 0.5s">
+                            <button class="faq-item__toggle">
+                                How does billing and scoping work for engagements?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-item__content">
+                                <p>
+                                    I operate on a transparent, milestone-driven basis for discrete
+                                    technical projects. For clients requiring ongoing technical
+                                    direction, I offer flexible monthly retainers for continuous
+                                    fractional engineering leadership and architectural advisory.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact" class="footer">
+            <div class="container">
+                <div class="footer__cta fade-in">
+                    <h2 class="footer__cta-title">Have a project in mind?</h2>
+                    <p>
+                        Whether you need a premium website redesign or complex architectural scaling, let's build it together.
+                    </p>
+                    <a href="mailto:jake.brown@abstractly.dev" class="btn btn--primary">
+                        Get in touch
+                    </a>
+                </div>
+
+                <div class="footer__grid">
+                    <div class="footer__brand fade-in">
+                        <a href="/">
+                            <img
+                                src="assets/logo.png"
+                                alt="abstractly.dev logo"
+                                class="footer__logo"
+                            />
+                        </a>
+                        <p>
+                            Providing bespoke consultancy at the intersection of deep technical
+                            execution and commercial strategy.
+                        </p>
+                        <div class="footer__socials">
+                            <a
+                                href="https://www.linkedin.com/in/onlyimmutable/"
+                                target="_blank"
+                                aria-label="LinkedIn"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                    />
+                                    <rect width="4" height="12" x="2" y="9" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://instagram.com/jakeythedev"
+                                target="_blank"
+                                aria-label="Instagram"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer__links fade-in" style="transition-delay: 0.1s">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#work">Experience</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="mentoring.html">Mentoring</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__contact fade-in" style="transition-delay: 0.2s">
+                        <h3>Contact Info</h3>
+                        <p>London, UK / Warsaw, PL</p>
+                        <p>Globally Available</p>
+                        <a href="mailto:jake.brown@abstractly.dev" class="footer__email">
+                            jake.brown@abstractly.dev
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__bottom fade-in" style="transition-delay: 0.3s">
+                    <p>&copy; 2026 Zemya Ltd. All rights reserved. <span style="opacity: 0.5; margin: 0 0.5rem">|</span> Company Number: 16817920</p>
+                    <div style="display: flex; gap: 2rem; font-size: 0.85rem; opacity: 0.7;">
+                        <a href="privacy.html" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">Privacy Policy</a>
+                        <a href="terms.html" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Return to Top -->
+        <button id="return-to-top" class="return-to-top" aria-label="Return to top">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="m18 15-6-6-6 6" />
+            </svg>
+        </button>
+
+        <!-- Markdown Output Modal -->
+        <div id="case-study-modal" class="modal">
+            <div class="modal__overlay" id="modal-overlay"></div>
+            <div class="modal__drawer">
+                <button class="modal__close" id="modal-close">&times;</button>
+                <div class="modal__content md-content" id="modal-content">
+                    <!-- Injected Markdown HTML goes here -->
+                </div>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

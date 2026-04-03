@@ -1,0 +1,20 @@
+@use "sass:color";
+
+$color-bg-dark: #000000;
+$color-bg-darker: #050505;
+$color-bg-surface: #0a0a0a;
+$color-text-primary: #ffffff;
+$color-text-secondary: #888888;
+$color-primary: #3b82f6; // Blue
+$color-secondary: #4ade80; // Green
+$gradient-brand: linear-gradient(135deg, $color-primary, $color-secondary);
+$gradient-brand-hover: linear-gradient(
+    135deg,
+    color.adjust($color-primary, $lightness: 5%),
+    color.adjust($color-secondary, $lightness: 5%)
+);
+
+$font-primary: 'Inter', sans-serif;
+$transition-speed: 0.3s;
+$border-radius: 4px;
+$container-width: 1300px;

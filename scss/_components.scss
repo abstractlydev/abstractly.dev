@@ -1,0 +1,168 @@
+@use 'variables' as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all $transition-speed;
+    border: none;
+
+    @media (max-width: 768px) {
+        padding: 0.875rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    &--primary {
+        background: $gradient-brand;
+        color: #fff;
+        box-shadow: 0 4px 15px rgba($color-primary, 0.3);
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba($color-primary, 0.4);
+        }
+    }
+
+    &--outline {
+        background: transparent;
+        color: $color-text-primary;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        &:hover {
+            border-color: $color-text-primary;
+            background: rgba(255, 255, 255, 0.05);
+        }
+    }
+}
+
+.button-group {
+    display: flex;
+    gap: 1.5rem;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: $color-bg-surface;
+    padding: 2.5rem 2rem;
+    border-radius: $border-radius;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition:
+        transform $transition-speed,
+        box-shadow $transition-speed,
+        border-color $transition-speed;
+    position: relative;
+    overflow: hidden;
+
+    &__icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: $color-primary;
+        display: inline-block;
+        background: $gradient-brand;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $gradient-brand;
+        opacity: 0;
+        transition: opacity $transition-speed;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba($color-primary, 0.3);
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: $color-text-primary;
+    }
+
+    p {
+        color: $color-text-secondary;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* -------------------------------------
+ * ANIMATION UTILITIES
+ * ------------------------------------- */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    color: $color-text-secondary;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    .pulse-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #2ecc71;
+        border-radius: 50%;
+        box-shadow: 0 0 0 rgba(46, 204, 113, 0.4);
+        animation: pulse 2s infinite;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+    }
+}

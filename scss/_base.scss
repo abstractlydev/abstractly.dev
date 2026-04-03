@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $color-bg-dark;
+    color: $color-text-primary;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; // Prevent horizontal scroll from bleeding background blobs
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color $transition-speed;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @media (max-width: 768px) {
+        padding: 0 1.25rem;
+    }
+}
