@@ -173,6 +173,93 @@
             </section>
 
             <section id="structure" class="section section--darker">
+                <style>
+                    .premium-card {
+                        position: relative;
+                        overflow: hidden;
+                        background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+                        border: 1px solid rgba(255,255,255,0.05);
+                        border-radius: 16px;
+                        padding: 3rem 2.5rem;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .premium-card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+                        background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+                    }
+                    .premium-card__watermark {
+                        position: absolute;
+                        right: -1rem;
+                        bottom: -3rem;
+                        font-size: 14rem;
+                        font-weight: 800;
+                        opacity: 0.02;
+                        line-height: 1;
+                        font-family: 'Inter', sans-serif;
+                        z-index: 0;
+                        transition: all 0.5s ease;
+                    }
+                    .premium-card:hover .premium-card__watermark {
+                        transform: scale(1.05);
+                        opacity: 0.04;
+                    }
+                    .premium-card__content {
+                        position: relative;
+                        z-index: 1;
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .premium-card__title {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        margin-bottom: 1rem;
+                        color: #fff;
+                    }
+                    .premium-card__desc {
+                        font-size: 1rem;
+                        line-height: 1.6;
+                        opacity: 0.75;
+                        margin-bottom: 2rem;
+                        flex-grow: 1;
+                    }
+                    .premium-card__price {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.75rem;
+                        padding: 0.75rem 1.25rem;
+                        border-radius: 0 8px 8px 0;
+                        font-family: monospace;
+                        font-weight: 600;
+                        font-size: 1.1rem;
+                        background: rgba(0,0,0,0.3);
+                        align-self: flex-start;
+                        border: 1px solid rgba(255,255,255,0.05);
+                    }
+                    .premium-card--full {
+                        grid-column: 1 / -1;
+                        text-align: center;
+                        align-items: center;
+                        padding: 4rem 2rem;
+                    }
+                    .premium-card--full .premium-card__price {
+                        align-self: center;
+                    }
+                    .premium-card--full .premium-card__desc {
+                        max-width: 600px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    .premium-card--full .premium-card__watermark {
+                        right: 50%;
+                        transform: translateX(50%);
+                        bottom: -2rem;
+                        font-size: 16rem;
+                    }
+                </style>
                 <div class="container">
                     <div class="section__header section__header--left fade-in">
                         <span class="section__label">(THE PROCESS)</span>
@@ -180,59 +267,70 @@
                     </div>
                     
                     <div class="services-grid">
-                        <div class="service-card fade-in" style="transition-delay: 0.1s">
-                            <span class="service-card__num">01</span>
-                            <h3>Coding & Algorithms Mock</h3>
-                            <p>
-                                A comprehensive coding assessment focusing on data structures, algorithmic complexity, and clean execution under pressure. Includes tactical feedback to optimize your problem-solving process.
-                            </p>
-                            <div style="margin-top: 2rem; font-family: monospace; color: #ff5f56; font-size: 1.25rem;">$199.99 / session</div>
-                        </div>
-                        <div class="service-card fade-in" style="transition-delay: 0.2s">
-                            <span class="service-card__num">02</span>
-                            <h3>Systems Design Mock</h3>
-                            <p>
-                                A rigorous 60-minute mock architecture interview simulating top-tier company standards. Followed by 30 minutes of deep, actionable feedback identifying failure points and scaling antipatterns.
-                            </p>
-                            <div style="margin-top: 2rem; font-family: monospace; color: #3b82f6; font-size: 1.25rem;">$199.99 / session</div>
-                        </div>
-                        <div class="service-card fade-in" style="transition-delay: 0.3s">
-                            <span class="service-card__num">03</span>
-                            <h3>Behavioural (Culture)</h3>
-                            <p>
-                                FAANG companies index heavily on culture. A 45-minute mock interview drilling past situational experiences to unearth your optimal narrative strategy for Leadership Principles.
-                            </p>
-                            <div style="margin-top: 2rem; font-family: monospace; color: #ffbd2e; font-size: 1.25rem;">$149.99 / session</div>
-                        </div>
-                        <div class="service-card fade-in" style="transition-delay: 0.4s">
-                            <span class="service-card__num">04</span>
-                            <h3>Resume & Strategy Review</h3>
-                            <p>
-                                Offline review of your CV and target list. We'll overhaul your bullet points to ensure they pass algorithmic screening and catch the eye of elite engineering managers.
-                            </p>
-                            <div style="margin-top: 2rem; font-family: monospace; color: #27c93f; font-size: 1.25rem;">$149.99 / review</div>
-                        </div>
-                        
-                        <div
-                            class="service-card service-card--full fade-in"
-                            style="
-                                transition-delay: 0.5s;
-                                text-align: center;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                padding: 4rem 2rem;
-                            "
-                        >
-                            <span class="service-card__num" style="margin-bottom: 1rem">05</span>
-                            <h3>Custom Packages & Guides</h3>
-                            <p style="max-width: 600px; margin: 0 auto">
-                                Need a longer-term engagement or written study guides? We can build a customized plan tailored to your specific timeline, target companies, and goals.
-                            </p>
-                            <div style="margin-top: 2rem; font-family: monospace; color: #a855f7; font-size: 1.25rem;">Custom Pricing</div>
+                        <div class="premium-card fade-in" style="transition-delay: 0.1s;">
+                            <div class="premium-card__watermark">01</div>
+                            <div class="premium-card__content">
+                                <h3 class="premium-card__title">Coding & Algorithms <span style="font-weight:400; opacity:0.5;">Mock</span></h3>
+                                <p class="premium-card__desc">
+                                    A comprehensive coding assessment focusing on data structures, algorithmic complexity, and clean execution under pressure. Includes tactical feedback to optimize your problem-solving process.
+                                </p>
+                                <div class="premium-card__price" style="color: #ff5f56; border-left: 3px solid #ff5f56;">
+                                    $199.99 <span style="opacity: 0.5; font-size: 0.85rem;">/ session</span>
+                                </div>
+                            </div>
                         </div>
 
+                        <div class="premium-card fade-in" style="transition-delay: 0.2s;">
+                            <div class="premium-card__watermark">02</div>
+                            <div class="premium-card__content">
+                                <h3 class="premium-card__title">Systems Design <span style="font-weight:400; opacity:0.5;">Mock</span></h3>
+                                <p class="premium-card__desc">
+                                    A rigorous 60-minute mock architecture interview simulating top-tier company standards. Followed by 30 minutes of deep, actionable feedback identifying failure points and scaling antipatterns.
+                                </p>
+                                <div class="premium-card__price" style="color: #3b82f6; border-left: 3px solid #3b82f6;">
+                                    $199.99 <span style="opacity: 0.5; font-size: 0.85rem;">/ session</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="premium-card fade-in" style="transition-delay: 0.3s;">
+                            <div class="premium-card__watermark">03</div>
+                            <div class="premium-card__content">
+                                <h3 class="premium-card__title">Behavioural <span style="font-weight:400; opacity:0.5;">(Culture)</span></h3>
+                                <p class="premium-card__desc">
+                                    FAANG companies index heavily on culture. A 45-minute mock interview drilling past situational experiences to unearth your optimal narrative strategy for Leadership Principles.
+                                </p>
+                                <div class="premium-card__price" style="color: #ffbd2e; border-left: 3px solid #ffbd2e;">
+                                    $149.99 <span style="opacity: 0.5; font-size: 0.85rem;">/ session</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="premium-card fade-in" style="transition-delay: 0.4s;">
+                            <div class="premium-card__watermark">04</div>
+                            <div class="premium-card__content">
+                                <h3 class="premium-card__title">Resume & Strategy <span style="font-weight:400; opacity:0.5;">Review</span></h3>
+                                <p class="premium-card__desc">
+                                    Offline review of your CV and target list. We'll overhaul your bullet points to ensure they pass algorithmic screening and catch the eye of elite engineering managers.
+                                </p>
+                                <div class="premium-card__price" style="color: #27c93f; border-left: 3px solid #27c93f;">
+                                    $149.99 <span style="opacity: 0.5; font-size: 0.85rem;">/ review</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="premium-card premium-card--full fade-in" style="transition-delay: 0.5s;">
+                            <div class="premium-card__watermark">05</div>
+                            <div class="premium-card__content">
+                                <h3 class="premium-card__title">Custom Packages & Guides</h3>
+                                <p class="premium-card__desc">
+                                    Need a longer-term engagement or written study guides? We can build a customized plan tailored to your specific timeline, target companies, and goals.
+                                </p>
+                                <div class="premium-card__price" style="color: #a855f7; border-left: 3px solid #a855f7;">
+                                    Custom Pricing <span style="opacity: 0.5; font-size: 0.85rem;">/ scoped</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
