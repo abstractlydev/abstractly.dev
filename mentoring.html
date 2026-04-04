@@ -335,6 +335,220 @@
                 </div>
             </section>
 
+            <!-- The Process Section -->
+            <section id="process" class="section">
+                <style>
+                    .process-card {
+                        background: rgba(255, 255, 255, 0.02);
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        border-radius: 16px;
+                        padding: 3rem 2.5rem;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .process-card__phase {
+                        font-family: monospace;
+                        font-size: 0.85rem;
+                        letter-spacing: 2px;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                        display: inline-block;
+                    }
+                    .process-card__title {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        margin-bottom: 2.5rem;
+                    }
+                    .process-list {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                    }
+                    .process-list li {
+                        position: relative;
+                        padding-left: 1.75rem;
+                        font-size: 1rem;
+                        line-height: 1.6;
+                        color: rgba(255, 255, 255, 0.8);
+                    }
+                    .process-list li::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0.5rem;
+                        width: 6px;
+                        height: 6px;
+                        background: currentColor;
+                        border-radius: 50%;
+                    }
+                    .process-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                        gap: 2rem;
+                    }
+                </style>
+                <div class="container fade-in">
+                    <div class="section__header section__header--left">
+                        <span class="section__label">(THE JOURNEY)</span>
+                        <h2 class="section__title">The <span class="highlight">Process</span></h2>
+                        <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.7); font-size: 1.15rem; max-width: 650px; line-height: 1.7;">
+                            Every session follows a strict, repeatable framework designed to extract maximum signal and simulate genuine high-pressure engineering loops.
+                        </p>
+                    </div>
+
+                    <div class="process-grid" style="margin-top: 4rem;">
+                        <!-- Phase 1 -->
+                        <div class="process-card">
+                            <span class="process-card__phase" style="color: #3b82f6;">PHASE 1</span>
+                            <h3 class="process-card__title">Alignment</h3>
+                            <ul class="process-list" style="color: #3b82f6;">
+                                <li><span style="color: rgba(255,255,255,0.85);">Reach out via email to initiate contact.</span></li>
+                                <li><span style="color: rgba(255,255,255,0.85);">A brief call to discuss your exact needs and target roles.</span></li>
+                                <li><span style="color: rgba(255,255,255,0.85);">Schedule a finalized date and time for the mock interview.</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Phase 2 -->
+                        <div class="process-card">
+                            <span class="process-card__phase" style="color: #ff5f56;">PHASE 2</span>
+                            <h3 class="process-card__title">The Simulation <span style="font-size: 1.1rem; opacity: 0.5; font-weight: 500; margin-left: 0.5rem;">(45m)</span></h3>
+                            <ul class="process-list" style="color: #ff5f56;">
+                                <li><span style="color: rgba(255,255,255,0.85);">Connect via Google Meet (Gemini enabled for notes).</span></li>
+                                <li><span style="color: rgba(255,255,255,0.85);">Transition to the relevant collaborative platform.</span></li>
+                                <li><span style="color: rgba(255,255,255,0.85);">Strict <strong>45-minute execution window</strong> to design or code your solution.</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Phase 3 -->
+                        <div class="process-card">
+                            <span class="process-card__phase" style="color: #27c93f;">PHASE 3</span>
+                            <h3 class="process-card__title">Evaluation <span style="font-size: 1.1rem; opacity: 0.5; font-weight: 500; margin-left: 0.5rem;">(15m)</span></h3>
+                            <ul class="process-list" style="color: #27c93f;">
+                                <li><span style="color: rgba(255,255,255,0.85);">Dedicated <strong>15-minute feedback block</strong> for live Q&A and breakdown.</span></li>
+                                <li><span style="color: rgba(255,255,255,0.85);">Receive written, actionable feedback detailing both strong positive signals and critical failure points.</span></li>
+                                <li><span style="color: rgba(255,255,255,0.85);">Final "Hire / No Hire" verdict provided with a clear roadmap.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tooling Stack Section -->
+            <section id="tools" class="section section--darker">
+                <style>
+                    .tool-card {
+                        background: rgba(20, 20, 20, 0.4);
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        border-radius: 16px;
+                        padding: 2.5rem;
+                        display: flex;
+                        flex-direction: column;
+                        transition: transform 0.3s ease, border-color 0.3s ease;
+                    }
+                    .tool-card:hover {
+                        transform: translateY(-3px);
+                        border-color: rgba(255,255,255,0.15);
+                    }
+                    .tool-card__icon {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 12px;
+                        background: rgba(255,255,255,0.05);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 2rem;
+                    }
+                    .tool-card__title {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        margin-bottom: 1rem;
+                    }
+                    .tool-card__desc {
+                        font-size: 1.05rem;
+                        line-height: 1.6;
+                        color: rgba(255,255,255,0.7);
+                        margin-bottom: 1.5rem;
+                        flex-grow: 1;
+                    }
+                    .lang-pills {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                    }
+                    .lang-pill {
+                        background: rgba(255,255,255,0.05);
+                        border: 1px solid rgba(255,255,255,0.1);
+                        border-radius: 4px;
+                        padding: 0.25rem 0.5rem;
+                        font-family: monospace;
+                        font-size: 0.8rem;
+                        color: rgba(255,255,255,0.9);
+                    }
+                </style>
+                <div class="container fade-in">
+                    <div class="section__header section__header--left">
+                        <span class="section__label">(INFRASTRUCTURE)</span>
+                        <h2 class="section__title">The <span class="highlight">Toolchain</span></h2>
+                        <p style="margin-top: 1.25rem; color: rgba(255,255,255,0.7); font-size: 1.15rem; max-width: 650px; line-height: 1.7;">
+                            We leverage industry-standard collaborative platforms to ensure your mock loops are as realistic and frictionless as possible.
+                        </p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                        <!-- Tool 1: Codeshare -->
+                        <div class="tool-card">
+                            <div class="tool-card__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff5f56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <h3 class="tool-card__title">Codeshare.io</h3>
+                            <p class="tool-card__desc">
+                                Utilized for algorithmic coding rounds. It provides a shared text editor that replicates the standard environment of technical phone screens, focusing entirely on code execution.
+                            </p>
+                            <div class="lang-pills">
+                                <span class="lang-pill">Java</span>
+                                <span class="lang-pill">JavaScript</span>
+                                <span class="lang-pill">Python</span>
+                                <span class="lang-pill">C++</span>
+                                <span class="lang-pill">C#</span>
+                            </div>
+                            <div style="margin-top: 1.25rem; display: flex; align-items: flex-start; gap: 0.4rem; color: rgba(255,255,255,0.4);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                                <p style="font-size: 0.85rem; font-style: italic; margin: 0;">
+                                    Other languages can be supported if discussed prior to the session.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Tool 2: Excalidraw -->
+                        <div class="tool-card">
+                            <div class="tool-card__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            </div>
+                            <h3 class="tool-card__title">Excalidraw</h3>
+                            <p class="tool-card__desc">
+                                Utilized for all Systems Design mock interviews. It provides a collaborative digital whiteboard to architect scalable infrastructure, diagram components, and trace data flows in real-time.
+                            </p>
+                        </div>
+
+                        <!-- Tool 3: Google Meet + Gemini -->
+                        <div class="tool-card">
+                            <div class="tool-card__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27c93f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                            </div>
+                            <h3 class="tool-card__title">Google Meet</h3>
+                            <p class="tool-card__desc">
+                                All sessions are hosted via Google Meet with Gemini AI enabled. This ensures accurate technical transcription and allows for comprehensive note-taking throughout the interview.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Marquee Breaker Section -->
             <section style="padding: 4rem 0; background: #050505; border-top: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03); overflow: hidden; display: flex; white-space: nowrap; margin-bottom: 2rem;">
                 <style>
